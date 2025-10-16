@@ -1,11 +1,13 @@
 import express from 'express';
-import bodyParser, { json } from 'body-parser';
+import usersRoute from './routes/web.js';
 import cors from 'cors';
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
+
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
-app.listen(8800)
+
+app.listen(8880);
+
+app.use('/', usersRoute);
