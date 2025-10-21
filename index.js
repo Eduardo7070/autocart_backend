@@ -11,3 +11,7 @@ app.use(cors());
 app.listen(8880);
 
 app.use('/', usersRoute);
+
+app.listen(8880, () => {
+  console.log('🚀 Servidor rodando na porta 8880');
+});
